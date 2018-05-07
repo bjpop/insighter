@@ -3,12 +3,7 @@
 from distutils.core import setup
 
 LONG_DESCRIPTION = \
-'''The program reads one or more input FASTA files. 
-For each file it computes a variety of statistics, and then
-prints a summary of the statistics as output.
-        
-The goal is to provide a solid foundation for new bioinformatics command line tools,
-and is an ideal starting place for new projects.'''
+'''Annotate DNA variants using the InSiGHT database'''
 
 
 setup(
@@ -19,11 +14,11 @@ setup(
     packages=['insighter'],
     package_dir={'insighter': 'insighter'},
     entry_points={
-        'console_scripts': ['insighter-py = insighter.insighter:main']
+        'console_scripts': ['insighter = insighter.insighter:main']
     },
     url='https://github.com/bjpop/insighter',
     license='LICENSE',
-    description=('A prototypical bioinformatics command line tool'),
+    description=('Annotate DNA variants using the InSiGHT database'),
     long_description=(LONG_DESCRIPTION),
-    install_requires=["biopython==1.66"],
+    install_requires=["feedparser"],
 )
